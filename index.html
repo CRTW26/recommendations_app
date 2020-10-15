@@ -3,15 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400&display=swap" rel="stylesheet">
   <link href='styles.css' rel='stylesheet' type='text/css'>
   <title>Recommendations</title>
 </head>
 <body>
-  <form id='search-query'>
-    <input type='text' name='q'>
-    <button type='submit'>GO</button>
-  </form>
-  <div id='results'>
+  <div class='container'>
+    <div class='headings'>
+      <h1>What to watch next?</h1>
+      <h2>Not sure what to watch next on Netflix?</h2>
+      <h2>Maybe you want to watch a film but aren't sure what?</h2>
+      <h2>Or perhaps you want a recomendation for a new band?</h2>
+    </div>
+    <div>
+      <form id='search-query'>
+        <input type='text' name='q'>
+        <button type='submit'>GO</button>
+      </form>
+    </div>
+    <div id='results'>
+    </div>
   </div>
   <script src='./src/app.js'></script>
 </body>
