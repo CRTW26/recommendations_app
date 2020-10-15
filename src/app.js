@@ -16,9 +16,12 @@ function search(searchTerm) {
     return response.json();
   }).then(function(response) {
     const searchResults = sortResponse(response);
-    formatHTML(searchResults);
+    const formattedResults = formatHTML(searchResults);
+    insertHTML(formattedResults);
   });
 }
+
+// makes array of search results from the response of the api call
 
 function sortResponse(response) {
   let searchResults = [];
@@ -27,6 +30,8 @@ function sortResponse(response) {
   }
   return searchResults
 }
+
+// formats search results array inside html
 
 function formatHTML(resultsArray) {
   let htmlString = '<ul>';
@@ -39,5 +44,11 @@ function formatHTML(resultsArray) {
     htmlString += '</ul>'
     console.log(htmlString);
     return htmlString
-  
+}
+
+// inserts html list onto page to return results 
+
+function insertHTML(formattedResponse) {
+  let results = document.getElementById('results')
+  results.innerHTML = formattedResponse;
 }
