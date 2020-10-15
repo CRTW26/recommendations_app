@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'httparty'
+require 'dotenv'
 
 class App < Sinatra::Base
 
