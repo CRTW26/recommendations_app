@@ -11,7 +11,7 @@ class App < Sinatra::Base
           #  'Access-Control-Allow-Origin' => ['OPTIONS', 'GET', 'POST']
   end 
 
-  get '/reccomendation' do 
+  get '/recommendation' do 
     address= 'https://tastedive.com/api/similar?q='
     token = ENV['TOKEN']
     query = params[:q]
