@@ -15,8 +15,8 @@ function search(searchTerm) {
   .then(function(response) {
     return response.json();
   }).then(function(response) {
-    console.log(response);
-    console.log(sortResponse(response));
+    const searchResults = sortResponse(response);
+    formatHTML(searchResults);
   });
 }
 
@@ -26,4 +26,18 @@ function sortResponse(response) {
     searchResults.push(response.Similar.Results[count].Name)
   }
   return searchResults
+}
+
+function formatHTML(resultsArray) {
+  let htmlString = '<ul>';
+  let results = resultsArray;
+  console.log(results);
+  for (let count = 0; count < results.length; count ++) {
+    htmlString += '<li><div>' + results[count] + '</div></li>'
+  }
+    console.log(htmlString);
+    htmlString += '</ul>'
+    console.log(htmlString);
+    return htmlString
+  
 }
