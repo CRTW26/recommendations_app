@@ -16,5 +16,14 @@ function search(searchTerm) {
     return response.json();
   }).then(function(response) {
     console.log(response);
+    console.log(sortResponse(response));
   });
+}
+
+function sortResponse(response) {
+  let searchResults = [];
+  for (let count = 0; count < 10; count ++) {
+    searchResults.push(response.Similar.Results[count].Name)
+  }
+  return searchResults
 }
