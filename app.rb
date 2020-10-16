@@ -18,13 +18,17 @@ class App < Sinatra::Base
     url = "#{address}#{query}&#{token}"
     response = HTTParty.get(url)
     write_json(response)
-    File.read('./recommendations.json')
+    send_results
   end 
 
   private 
 
   def write_json(response)
     File.open('./recommendations.json', 'w') { |f| f.write response }
+  end 
+
+  def send_results
+    File.read('./recommendations.json')
   end 
 
 end 
