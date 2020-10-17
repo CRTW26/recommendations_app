@@ -11,7 +11,7 @@ Enter the name of your favourite show or arist.
 
 ## Note ##
 This app does require an api key to access the tastedive api.  
-This can be obtained from tasetedive.com.
+This can be obtained from https://tasetedive.com.
 Once you have an api key, enter the following commands to get started.  
 `touch .env`  
 Save your api key in the env file as follows:  
