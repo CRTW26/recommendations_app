@@ -1,7 +1,7 @@
 Recommendations App
 ===================
 
-This is a simple web app that makes use of the tastedive api to make tv, film and music recommendations. You can enter the name of your favourite artist and it will give you ten suggestions for similar artists that you might like to try. 
+This is a simple web app that makes use of the tastedive api to make tv, film and music recommendations based on your current taste. You can enter the name of your favourite artist and it will give you ten suggestions for similar artists that you might like to try. 
 
 ## How to use ##
 Clone this repo   
